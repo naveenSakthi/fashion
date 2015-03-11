@@ -16,7 +16,7 @@
     </nav>
 
 
- <  <!-- Page Content -->
+   <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading/Breadcrumbs -->
@@ -34,31 +34,84 @@
             <!-- Sidebar Column -->
             <div class="col-md-3">
                 <div class="list-group">
-                    <a href="index.html" class="list-group-item">Home</a>
-                    <a href="about.html" class="list-group-item">About</a>
-                    <a href="services.html" class="list-group-item">Services</a>
-                    <a href="contact.html" class="list-group-item">Contact</a>
-                    <a href="portfolio-1-col.html" class="list-group-item">1 Column Portfolio</a>
-                    <a href="portfolio-2-col.html" class="list-group-item">2 Column Portfolio</a>
-                    <a href="portfolio-3-col.html" class="list-group-item">3 Column Portfolio</a>
-                    <a href="portfolio-4-col.html" class="list-group-item">4 Column Portfolio</a>
-                    <a href="portfolio-item.html" class="list-group-item">Single Portfolio Item</a>
-                    <a href="blog-home-1.html" class="list-group-item">Blog Home 1</a>
-                    <a href="blog-home-2.html" class="list-group-item">Blog Home 2</a>
-                    <a href="blog-post.html" class="list-group-item">Blog Post</a>
-                    <a href="full-width.html" class="list-group-item">Full Width Page</a>
-                    <a href="sidebar.html" class="list-group-item active">Sidebar Page</a>
-                    <a href="faq.html" class="list-group-item">FAQ</a>
-                    <a href="404.html" class="list-group-item">404</a>
-                    <a href="pricing.html" class="list-group-item">Pricing Table</a>
+                    <div class="input-group">
+                    <input type="text" class="form-control input-sm" placeholder="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></span>
+                    </div>
+                    
+                    <div class="target">
+                    <ui>
+                    <li><span>Popularity</span></li>
+                    <li><span>Rating</span></li>
+                    <li><span>Cost</span></li>
+                    <li><span>Style</span></li>
+                    </ui>
+                    </div>
+                    <div class="input-group">
+                    <input type="text" class="form-control input-sm" placeholder="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></span>
+                    </div>
+                    
+                    <div class="target">
+                    <ui>
+                    <li><span>Popularity</span></li>
+                    <li><span>Rating</span></li>
+                    <li><span>Cost</span></li>
+                    <li><span>Style</span></li>
+                    </ui>
+                    </div>
+                    <div class="input-group">
+                    <input type="text" class="form-control input-sm" placeholder="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></span>
+                    </div>
+                    
+                    <div class="target">
+                    <ui>
+                    <li><span>Popularity</span></li>
+                    <li><span>Rating</span></li>
+                    <li><span>Cost</span></li>
+                    <li><span>Style</span></li>
+                    </ui>
+                    </div>
+
+                    
                 </div>
             </div>
             <!-- Content Column -->
-            <div class="col-md-9">
-                <h2>Section Heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, et temporibus, facere perferendis veniam beatae non debitis, numquam blanditiis necessitatibus vel mollitia dolorum laudantium, voluptate dolores iure maxime ducimus fugit.</p>
+            <div class="col-md-7">
+                 <div class="panel panel-default">
+                    <div class="panel-heading">This Page is Disabled</div>
+                    <div class="panel-body">This page is temporarily disabled by the site administrator for some reason.<br> <a href="#">Click here</a> to enable the page.</div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                 <div class="panel panel-default">
+                    <div class="panel-heading">This Page is Disabled</div>
+                    <div class="panel-body">This page is temporarily disabled by the site administrator for some reason.<br> <a href="#">Click here</a> to enable the page.</div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                 <div class="panel panel-default">
+                    <div class="panel-heading">This Page is Disabled</div>
+                    <div class="panel-body">This page is temporarily disabled by the site administrator for some reason.<br> <a href="#">Click here</a> to enable the page.</div>
+                </div>
             </div>
         </div>
         <!-- /.row -->
 
-       
+ <script>
+ $(document).ready(function() {
+ $(".target").hide();
+ $(".glyphicon-minus").hide();
+  $(".glyphicon-plus").click(function(){
+         $(".target").slideDown( 'fast', function(){
+         $(".glyphicon-plus").hide();
+         $(".glyphicon-minus").show(); 
+                      });
+      });
+
+      $(".glyphicon-minus").click(function(){
+         $(".target").slideUp( 'fast', function(){ 
+        $(".glyphicon-plus").show(); 
+        $(".glyphicon-minus").hide();
+          });
+      });
+  });
+ </script>      

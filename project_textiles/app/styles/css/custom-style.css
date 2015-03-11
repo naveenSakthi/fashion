@@ -642,7 +642,9 @@ section#contact {
     background-position: center;
     background-repeat: no-repeat;
 }
-
+input{
+    border-right: none !important;
+}
 section#contact .section-heading {
     color: #fff;
 }
