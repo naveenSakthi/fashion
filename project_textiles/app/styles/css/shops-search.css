@@ -1,0 +1,42 @@
+.custom-header-size{
+  text-transform: none;
+  font-size: 18px;
+}
+.filter-heading{
+  font-size: 12px;
+  font-weight: bold;
+  width: inherit;
+  padding: 5px 0 2px 0;
+}
+.list-group .filter-box{
+  margin-top: 8px;
+}
+.list-group .filter-box .filter-input{
+  border-left: none;
+  border-right: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: white;
+  border-color: #f1f2f7;
+  box-shadow: none;
+}
+.list-group .filter-box .input-group-addon{
+  background: white;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: #f1f2f7;
+  cursor: pointer;
+}
+.right-border{
+  border:1px solid #eeeee;
+}
+.remove-bottom-border{
+  border-bottom:none;
+}
+ul.filter-list li{
+  list-style: none;
+padding: 5px 0 5px 0;
+font-size: 12px;
+
+}

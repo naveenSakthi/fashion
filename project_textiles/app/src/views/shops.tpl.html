@@ -4,77 +4,86 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Sidebar Page
-                    <small>Subheading</small>
+                <h1 class="page-header custom-header-size">Sidebar Page
+                    <!-- <small>Subheading</small> -->
                 </h1>
             </div>
         </div>
         <!-- /.row -->
 
         <!-- Content Row -->
-        <div class="row">
+        <div class="row col-md-12">
             <!-- Sidebar Column -->
-            <div class="col-md-3">
+            <div class="col-md-3 right-border">
                 <div class="list-group">
-                    <div class="input-group">
-                    <input type="text" class="form-control input-sm" placeholder="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></span>
+                    <span class="filter-heading">Filter 1</span>
+                    <div class="input-group filter-box">
+                    <input type="text" class="form-control input-sm filter-input" placeholder="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></span>
                     </div>
-                    
                     <div class="target">
-                    <ui>
+                    <ul class="filter-list">
                     <li><span>Popularity</span></li>
                     <li><span>Rating</span></li>
                     <li><span>Cost</span></li>
                     <li><span>Style</span></li>
-                    </ui>
+                    </ul>
                     </div>
-                    <div class="input-group">
-                    <input type="text" class="form-control input-sm" placeholder="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></span>
                     </div>
-                    
-                    <div class="target">
-                    <ui>
-                    <li><span>Popularity</span></li>
-                    <li><span>Rating</span></li>
-                    <li><span>Cost</span></li>
-                    <li><span>Style</span></li>
-                    </ui>
-                    </div>
-                    <div class="input-group">
-                    <input type="text" class="form-control input-sm" placeholder="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></span>
-                    </div>
-                    
-                    <div class="target">
-                    <ui>
-                    <li><span>Popularity</span></li>
-                    <li><span>Rating</span></li>
-                    <li><span>Cost</span></li>
-                    <li><span>Style</span></li>
-                    </ui>
+                    <div class="list-group">
+                        <span class="filter-heading">Filter 2</span>
+                    <div class="input-group filter-box">
+                    <input type="text" class="form-control input-sm filter-input" placeholder="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></span>
                     </div>
 
-                    
+                    <div class="target">
+                    <ul class="filter-list">
+                    <li><span>Popularity</span></li>
+                    <li><span>Rating</span></li>
+                    <li><span>Cost</span></li>
+                    <li><span>Style</span></li>
+                    </ul>
+                    </div>
+                </div>
+                <div class="list-group">
+                    <span class="filter-heading ">Filter 3</span>
+                    <div class="input-group filter-box">
+                    <input type="text" class="form-control input-sm filter-input" placeholder="Recipient's username" aria-describedby="basic-addon2"><span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span><span class="glyphicon glyphicon-minus"></span></span>
+                    </div>
+
+                    <div class="target">
+                    <ul class="filter-list">
+                    <li><span>Popularity</span></li>
+                    <li><span>Rating</span></li>
+                    <li><span>Cost</span></li>
+                    <li><span>Style</span></li>
+                    </ul>
+                    </div>
+
+
                 </div>
             </div>
             <!-- Content Column -->
-            <div class="col-md-7">
+            <!-- middle part starts -->
+            <div class="col-md-8">
+            <div class="">
                  <div class="panel panel-default">
                     <div class="panel-heading">This Page is Disabled</div>
                     <div class="panel-body">This page is temporarily disabled by the site administrator for some reason.<br> <a href="#">Click here</a> to enable the page.</div>
                 </div>
             </div>
-            <div class="col-md-7">
+            <div class="">
                  <div class="panel panel-default">
                     <div class="panel-heading">This Page is Disabled</div>
                     <div class="panel-body">This page is temporarily disabled by the site administrator for some reason.<br> <a href="#">Click here</a> to enable the page.</div>
                 </div>
             </div>
-            <div class="col-md-7">
+            <div class="">
                  <div class="panel panel-default">
                     <div class="panel-heading">This Page is Disabled</div>
                     <div class="panel-body">This page is temporarily disabled by the site administrator for some reason.<br> <a href="#">Click here</a> to enable the page.</div>
                 </div>
             </div>
+        </div> <!-- middle part ends -->
         </div>
         <!-- /.row -->
 
@@ -83,17 +92,21 @@
  $(".target").hide();
  $(".glyphicon-minus").hide();
   $(".glyphicon-plus").click(function(){
+    $(".filter-input").addClass('remove-bottom-border');
          $(".target").slideDown( 'fast', function(){
          $(".glyphicon-plus").hide();
-         $(".glyphicon-minus").show(); 
+         $(".glyphicon-minus").show();
+
                       });
       });
 
       $(".glyphicon-minus").click(function(){
-         $(".target").slideUp( 'fast', function(){ 
-        $(".glyphicon-plus").show(); 
+        $(".filter-input").removeClass('remove-bottom-border');
+         $(".target").slideUp( 'fast', function(){
+        $(".glyphicon-plus").show();
         $(".glyphicon-minus").hide();
+        $(".filter-input").removeClass('remove-bottom-border');
           });
       });
   });
- </script>      
+ </script>
