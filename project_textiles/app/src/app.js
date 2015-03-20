@@ -5,15 +5,15 @@ var fashionApp = angular.module('fashionApp', ["ui.router"])
             url: "",
             templateUrl: 'src/views/main.tpl.html',
         })
-        .state('main.index', {
+        .state('main.home', {
             url: "/",
             templateUrl: 'src/views/home.tpl.html',
         })
-        .state('main.category', {
+        .state('category', {
             url: "/category",
             templateUrl: 'src/views/category.tpl.html',
         })
-         .state('main.shops', {
+         .state('shops', {
             url: "/shops",
             templateUrl: 'src/views/shops.tpl.html',
         })

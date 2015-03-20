@@ -1,70 +1,122 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="fashionApp">
-
+<!doctype html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="description" content="Fashion World">
+<meta name="keywords" content="Fashion Cloths,jewels,Bags,Shoes">
+<meta name="author" content="Naveen">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!-- SITE TITLE -->
+<title>Fashion World</title>
 
-    <title>Fashion - Start </title>
+<!-- =========================
+      FAV AND TOUCH ICONS  
+============================== -->
+<link rel="icon" href="images/favicon.ico">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="components/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- =========================
+     STYLESHEETS   
+============================== -->
+<!-- BOOTSTRAP -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
 
-    <!-- Custom CSS -->
-    <link href="styles/css/home.css" rel="stylesheet">
-    <link href="styles/css/shop-detail.css" rel="stylesheet">
-    <link href="styles/css/shops-search.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<!-- FONT ICONS -->
+<!-- IonIcons -->
+<link rel="stylesheet" href="assets/ionicons/css/ionicons.css">
 
+<!-- Font Awesome 
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+-->
+
+<!-- Elegant Icons -->
+<link rel="stylesheet" href="assets/elegant-icons/style.css">
+<link rel="stylesheet" href="css/page-css/shop-detail.css">
+<!--[if lte IE 7]><script src="assets/elegant-icons/lte-ie7.js"></script><![endif]-->
+
+
+
+<!-- CAROUSEL AND LIGHTBOX -->
+<link rel="stylesheet" href="css/owl.theme.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/nivo-lightbox.css">
+<link rel="stylesheet" href="css/nivo_themes/default/default.css">
+
+<!-- COLORS -->
+<!-- <link rel="stylesheet" href="css/colors/blue.css"> --> <!-- DEFAULT COLOR/ CURRENTLY USING -->
+<!-- <link rel="stylesheet" href="css/colors/red.css"> -->
+<!-- <link rel="stylesheet" href="css/colors/green.css"> -->
+<!-- <link rel="stylesheet" href="css/colors/purple.css"> -->
+<!-- <link rel="stylesheet" href="css/colors/orange.css"> -->
+<link rel="stylesheet" href="css/colors/blue-munsell.css">
+<!-- <link rel="stylesheet" href="css/colors/slate.css"> -->
+<!-- <link rel="stylesheet" href="css/colors/yellow.css"> -->
+
+<!-- CUSTOM STYLESHEETS -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- RESPONSIVE FIXES -->
+<link rel="stylesheet" href="css/responsive.css">
+
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- ****************
+      After neccessary customization/modification, Please minify HTML/CSS according to http://browserdiet.com/en/ for better performance
+     **************** -->
+     
 </head>
 
-<body id="page-top" class="index">
-    <div ui-view=""></div>
+<body ng-app="fashionApp">
+<div ui-view=""></div>
+<!-- =========================
+     PRE LOADER       
+============================== -->
+<div class="preloader">
+  <div class="status">&nbsp;</div>
+</div>
+<!-- =========================
+     SCRIPTS   
+============================== -->
+<script src="js/jquery.min.js"></script>
 
-    <!-- jQuery -->
-    <script src="components/jquery/jquery.min.js"></script>
-  <script src="components/angular/angular.js"></script>
-  <script src="components/angular-ui-router/angular-ui-router.min.js"></script>
+<script>
+/* =================================
+   LOADER                     
+=================================== */
+// makes sure the whole site is loaded
+jQuery(window).load(function() {
+  "use strict";
+        // will first fade out the loading animation
+  jQuery(".status").fadeOut();
+        // will fade out the whole DIV that covers the website.
+  jQuery(".preloader").delay(1000).fadeOut("slow");
+})
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="components/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="src/app.js"></script>
+</script>
 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/retina-1.1.0.min.js"></script>
+<script src="js/smoothscroll.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/jquery.localScroll.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/nivo-lightbox.min.js"></script>
+<script src="js/simple-expand.min.js"></script>
+<script src="js/jquery.nav.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/angular/angular.min.js"></script>
+<script src="js/angular-ui-router/angular-ui-router.min.js"></script>
+<script src="src/app.js"></script>
+<!-- ****************
+      After neccessary customization/modification, Please minify JavaScript/jQuery according to http://browserdiet.com/en/ for better performance
+     **************** -->
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
