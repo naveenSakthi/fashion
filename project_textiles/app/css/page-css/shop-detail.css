@@ -1,20 +1,30 @@
-
-.no-padding{
-	padding:0;
+.list-group{
+	margin-bottom: 0px;s
 }
 
-.mini-box{
- 	position: relative;
-    width: 100%;
-    height: 150px;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+/******* EXAMPLE C *******/
 
+.rating-c .br-widget {
+    height: 52px;
 }
-.info-bar{
-	width: 100%
-	border-bottom:1px solid #eee;
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-	margin: 10px 0 10px 0;
+
+.rating-c .br-widget a {
+    display: block;
+    width: 35px;
+    height: 35px;
+    float: left;
+    background-color: #e3e3e3;
+    margin: 2px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2.2;
+    text-align: center;
+    color: #b6b6b6;
+}
+
+.rating-c .br-widget a.br-active,
+.rating-c .br-widget a.br-selected {
+    background-color: #59a6d6;
+    color: white;
 }
