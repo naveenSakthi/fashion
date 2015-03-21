@@ -339,8 +339,8 @@ h6 {
 .section5,
 .section6,
 .section7 {
-	padding-top: 75px;
-	padding-bottom: 75px;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
 .color-overlay {
@@ -917,8 +917,8 @@ object {
    4.11 SECTION: FOOTER             
 ==========================================*/
 footer {
-	padding-top: 75px;
-	padding-bottom: 75px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .footer-logo {
