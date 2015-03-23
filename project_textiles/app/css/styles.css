@@ -217,14 +217,6 @@ li {
 	margin-bottom: 10px;
 }
 
-.vertical-line{
-  width: 1px;
-  height:70px;
-  margin: auto;
-  margin-left: 10px;
-  margin-right: 10px;
-
-}
 
 
 /*---------------------------------------
@@ -341,9 +333,6 @@ h6 {
 .section7 {
 	padding-top: 25px;
 	padding-bottom: 25px;
-}
-.section3{
-	background-color: #CABDBD;
 }
 
 .color-overlay {

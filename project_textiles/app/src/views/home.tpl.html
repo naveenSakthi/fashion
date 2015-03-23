@@ -111,7 +111,7 @@
 
                 
                 <!-- SUBSCRIBE BUTTON -->
-                <button type="submit" id="subscribe-button1" class="btn standard-button">GET STARTED</button>
+                <button type="submit" id="subscribe-button1" class="btn standard-button">Search</button>
                 
             </form>
                 </div>
@@ -206,7 +206,6 @@
                 </div>
             </div>
         </div>
-        <div class="colored-line"></div>
         <!-- FEATURES ROW 2 -->
         <div class="row">
             
@@ -265,81 +264,61 @@
                     </p> -->
                 </div>
             </div>
-            
+
         </div> 
     </div>
     <button type="submit" id="subscribe-button1" class="btn standard-button">Browse All</button>
 </div> <!-- /END CONTAINER -->
 </section>
+
 <!-- =========================
-     SECTION 2   
+     SECTION 6   
 ============================== -->
-<section class="section2 bgcolor-2" id="section2">
+<section class="section6 bgcolor-2" id="section6">
 <div class="container">
     
-    <div class="row">
-        
-        <div class="col-md-6">
-            
-            <!-- DETAILS WITH LIST -->
-            <div class="brief text-left">
-                
-                <!-- HEADING -->
-                <h2>Describe more about product</h2>
-                <div class="colored-line pull-left">
-                </div>
-                
-                <!-- TEXT -->
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
-                </p>
-                
-                <!-- FEATURE LIST -->
-                <ul class="feature-list-2">
-                    
-                    <!-- FEATURE -->
-                    <li>
-                    <!-- ICON -->
-                    <div class="icon-container pull-left">
-                        <span class="icon_cog"></span>
-                    </div>
-                    <!-- DETAILS -->
-                    <div class="details pull-left">
-                        <h6>Easy to Customize</h6>
-                        <p>
-                            Lorem lean startup ipsum product market fit customer development acquihire technical cofounder.
-                        </p>
-                    </div>
-                    </li>
-                    
-                    <!-- FEATURE -->
-                    <li>
-                    <!-- ICON -->
-                    <div class="icon-container pull-left">
-                        <span class="icon_cart_alt"></span>
-                    </div>
-                    <!-- DETAILS -->
-                    <div class="details pull-left">
-                        <h6>Lorem Ipsum</h6>
-                        <p>
-                            Lorem lean startup ipsum product market fit customer development acquihire technical cofounder.
-                        </p>
-                    </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="col-md-6">
-            <!-- SCREENSHOT -->
-            <div class="side-screenshot2 pull-right">
-                <img src="images/shopping.jpeg" alt="Feature" class="img-responsive">
-            </div>
-        </div>
-        
-    </div> <!-- END ROW -->
+    <!-- SECTION HEADING -->
+    <h2>Screenshots</h2>
+    <div class="colored-line">
+    </div>
     
-</div> <!-- END CONTAINER -->
+    <div class="sub-heading">
+        Term sheet convertible note colluding bootstrapping.
+    </div>
+    
+    <!-- SCREENSHOTS -->
+    <div class="row screenshots">
+        
+        <div id="screenshots" class="owl-carousel owl-theme">
+            
+            <div class="shot">
+                <a href="images/screenshots/1.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/1.jpg" alt="Screenshot"></a>
+            </div>
+            
+            <div class="shot">
+                <a href="images/screenshots/3.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/3.jpg" alt="Screenshot"></a>
+            </div>
+            
+            <div class="shot">
+                <a href="images/screenshots/2.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/2.jpg" alt="Screenshot"></a>
+            </div>
+            
+            <div class="shot">
+                <a href="images/screenshots/4.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/4.jpg" alt="Screenshot"></a>
+            </div>
+            
+            <div class="shot">
+                <a href="images/screenshots/1.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/1.jpg" alt="Screenshot"></a>
+            </div>
+            
+            <div class="shot">
+                <a href="images/screenshots/2.jpg" data-lightbox-gallery="screenshots-gallery"><img src="images/screenshots/2.jpg" alt="Screenshot"></a>
+            </div>
+        </div>
+        
+    </div> <!-- /END SCREENSHOTS -->
+    
+</div> <!-- /END CONTAINER -->
 
 </section>
 
@@ -458,4 +437,34 @@ $(window).resize(function () {
         });
     }
 });
+
+/* =================================
+===  OWL CROUSEL               ====
+=================================== */
+    var owl = $("#screenshots");
+    owl.owlCarousel({
+        items: 3, //3 items above 1000px browser width
+        itemsDesktop: [1000, 3], //3 items between 1000px and 901px
+        itemsDesktopSmall: [900, 2], // betweem 900px and 601px
+        itemsTablet: [600, 1], //1 items between 600 and 0
+        itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+        navigation: false, // Show next and prev buttons
+        slideSpeed: 800,
+        paginationSpeed: 400,
+        autoPlay: 5000,
+        stopOnHover: true
+    });
+
+    var owl = $("#feedbacks");
+    owl.owlCarousel({
+        items: 3, //3 items above 1000px browser width
+        itemsDesktop: [1000, 2], //2 items between 1000px and 901px
+        itemsDesktopSmall: [900, 2], // betweem 900px and 601px
+        itemsTablet: [600, 1], //1 items between 600 and 0
+        itemsMobile: false, // itemsMobile disabled - inherit from itemsTablet option
+        navigation: false, // Show next and prev buttons
+        stopOnHover: true
+    });
+
+
 </script>
