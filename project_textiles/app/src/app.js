@@ -21,5 +21,9 @@ var fashionApp = angular.module('fashionApp', ["ui.router"])
             url: "/shop-detail",
             templateUrl: 'src/views/shop-detail.tpl.html',
         })
+         .state('main.user', {
+            url: "/user",
+            templateUrl: 'src/views/user.tpl.html',
+        })
         
     })

@@ -936,3 +936,6 @@ footer {
 .social-icons li a:hover {
 	text-decoration: none;
 }
+.custom-nav{
+	padding-top: 75px;
+}
