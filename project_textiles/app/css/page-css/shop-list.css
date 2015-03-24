@@ -1,6 +1,8 @@
 .custom-header-size{
   text-transform: none;
   font-size: 18px;
+  margin-top: 60px;
+  text-align:left;
 }
 .filter-heading{
   font-size: 12px;

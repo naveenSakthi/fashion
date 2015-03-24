@@ -9,13 +9,13 @@ var fashionApp = angular.module('fashionApp', ["ui.router"])
             url: "/",
             templateUrl: 'src/views/home.tpl.html',
         })
-        .state('category', {
-            url: "/category",
-            templateUrl: 'src/views/category.tpl.html',
+        .state('main.categories', {
+            url: "/categories",
+            templateUrl: 'src/views/category-list.tpl.html',
         })
          .state('shops', {
             url: "/shops",
-            templateUrl: 'src/views/shops.tpl.html',
+            templateUrl: 'src/views/shop-list.tpl.html',
         })
          .state('main.shop-detail', {
             url: "/shop-detail",
@@ -27,7 +27,7 @@ var fashionApp = angular.module('fashionApp', ["ui.router"])
         })
          .state('main.offers', {
             url: "/offers",
-            templateUrl: 'src/views/offers.tpl.html',
+            templateUrl: 'src/views/offer-list.tpl.html',
         })
 
         
