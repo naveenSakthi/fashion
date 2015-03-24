@@ -25,5 +25,10 @@ var fashionApp = angular.module('fashionApp', ["ui.router"])
             url: "/user",
             templateUrl: 'src/views/user.tpl.html',
         })
+         .state('main.offers', {
+            url: "/offers",
+            templateUrl: 'src/views/offers.tpl.html',
+        })
+
         
     })

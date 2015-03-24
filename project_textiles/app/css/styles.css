@@ -939,3 +939,6 @@ footer {
 .custom-nav{
 	padding-top: 75px;
 }
+.list-group-padding{
+	padding-bottom:10px;
+}
