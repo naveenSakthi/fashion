@@ -1,0 +1,18 @@
+.offer-box{
+	border:1px solid black;
+	margin-top: 10px;
+	min-height:180px;
+	cursor: pointer;
+}
+.offer-box .offer-detail{
+	color:red;
+	opacity: 0;
+	left:100%;
+}
+
+.offer-box:hover .offer-detail{
+	color:green;
+	opacity: 1;
+	left:0;
+	transition: opacity ease 0.5s;
+}
