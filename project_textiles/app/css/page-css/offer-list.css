@@ -1,18 +1,35 @@
-.offer-box{
-	border:1px solid black;
-	margin-top: 10px;
-	min-height:180px;
-	cursor: pointer;
+.offer-box {
+  position: relative;
+  border: 1px solid rgba(74, 74, 74, 0.075);
+  margin-top: 10px;
+  min-height: 180px;
+  cursor: pointer;
 }
-.offer-box .offer-detail{
-	color:red;
-	opacity: 0;
-	left:100%;
+.offer-box .offer-detail {
+  color: white;
+  display: none;
+  left: 100%;
+  text-align: left;
+  padding-left: 10px;
+  min-height: 180px;
+  width: 100%;
 }
-
-.offer-box:hover .offer-detail{
-	color:green;
-	opacity: 1;
-	left:0;
-	transition: opacity ease 0.5s;
+.offer-box .offer-heading {
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(74, 74, 74, 0.075);
+}
+.offer-box:hover {
+  border: 2px solid #0196a7;
+}
+.offer-box:hover .offer-detail {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  transition: opacity ease 0.5s;
+  background: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+.offer-box:hover .offer-heading {
+  font-weight: bold;
 }

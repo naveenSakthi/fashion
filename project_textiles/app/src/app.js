@@ -27,8 +27,8 @@ var fashionApp = angular.module('fashionApp', ["ui.router"])
         })
          .state('main.offers', {
             url: "/offers",
-            templateUrl: 'src/views/offer-list.tpl.html',
+            templateUrl: 'src/views/offer.tpl.html',
         })
 
-        
+
     })
