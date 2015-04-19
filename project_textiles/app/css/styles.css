@@ -942,3 +942,11 @@ footer {
 .list-group-padding{
 	padding-bottom:10px;
 }
+
+.btn-category{
+	padding:12px 72px !important;
+}
+
+.sub-heading{
+	padding-top:10px;
+}
