@@ -229,7 +229,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Raleway', sans-serif;
-	color: #323232;
+	/*color: #323232;*/
 	margin-bottom: 0;
 	margin-top: 0;
 }
@@ -358,7 +358,7 @@ header .vertical-registration-form {
 }
 
 .navigation-header {
-	padding-top: 47px;
+	/*padding-top: 0;*/
 	padding-bottom: 30px;
 }
 

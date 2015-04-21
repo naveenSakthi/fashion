@@ -25,7 +25,7 @@
 .tooltip-content {
 	position: absolute;
 	z-index: 99;
-	width: 800px;
+	width: 950px;
 	left: 50%;
 	margin-left: -500px;
 	top: 40px;
@@ -68,7 +68,7 @@
 }
 
 .list-of-category{
-	width: 798px;
+	width: 948px;
 	background: none repeat scroll 0% 0% #FFF;
 	color: #555;
 	display: inline-block;

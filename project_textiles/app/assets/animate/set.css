@@ -27,7 +27,7 @@
 .grid figure figcaption {
 	padding: 2em;
 	color: #fff;
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 1.25em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -162,7 +162,7 @@ figure.effect-sadie h2 {
 	top: 50%;
 	left: 0;
 	width: 100%;
-	color: #484c61;
+	color: white;
 	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
 	transition: transform 0.35s, color 0.35s;
 	-webkit-transform: translate3d(0,-50%,0);
@@ -188,8 +188,8 @@ figure.effect-sadie p {
 
 figure.effect-sadie:hover h2 {
 	color: #fff;
-	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	/*-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);*/
 }
 
 figure.effect-sadie:hover figcaption::before ,
@@ -239,7 +239,7 @@ figure.effect-roxy figcaption {
 }
 
 figure.effect-roxy h2 {
-	padding: 30% 0 10px 0;
+	padding: 40% 0 10px 0;
 }
 
 figure.effect-roxy p {
@@ -424,15 +424,19 @@ figure.effect-romeo:hover p {
 /*---------------*/
 
 figure.effect-layla {
-	background: #18a367;
+	/*background: #18a367;*/
+	/*box-shadow: 0px -5px 5px -4px #0196A7;*/
 }
 
 figure.effect-layla img {
 	height: 390px;
+	width: 98%;
+	border-radius: 4px;
+
 }
 
 figure.effect-layla figcaption {
-	padding: 3em;
+	/*padding: 3em;*/
 }
 
 figure.effect-layla figcaption::before,
@@ -469,7 +473,7 @@ figure.effect-layla figcaption::after {
 }
 
 figure.effect-layla h2 {
-	padding-top: 26%;
+	padding-top: 10%;
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
 }
@@ -497,7 +501,8 @@ figure.effect-layla p {
 }
 
 figure.effect-layla:hover img {
-	opacity: 0.7;
+	opacity: 0.5;
+
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }
@@ -523,6 +528,24 @@ figure.effect-layla:hover img {
 	-webkit-transition-delay: 0.15s;
 	transition-delay: 0.15s;
 }
+figure.effect-layla h2
+{
+	background: rgba(0,0,0,0.4);
+}
+figure.effect-layla:hover p
+{
+	background: rgba(0,0,0,0.4);
+}
+figure.effect-layla a
+{
+	font-weight: bold;
+}
+figure.effect-layla:hover a
+{
+	color:white;
+	
+}
+
 
 /*---------------*/
 /***** Honey *****/
