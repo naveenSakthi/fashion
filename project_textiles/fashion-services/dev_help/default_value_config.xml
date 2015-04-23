@@ -1,0 +1,10 @@
+<defaultconfig>
+  <conf name="users"    				class="com.gofrugal.raymedi.common.util.CommonDefaultValueUpdater" xmlfile="../sqlscript/default_values/users.xml"/>
+  <conf name="sequence" 				class="com.gofrugal.raymedi.common.util.CommonDefaultValueUpdater" xmlfile="../sqlscript/default_values/sequence.xml"/>
+  <conf name="master" 					class="com.gofrugal.raymedi.common.util.CommonDefaultValueUpdater" xmlfile="../sqlscript/default_values/master.xml"/>
+  <conf name="taxformula" 				class="com.gofrugal.raymedi.common.util.CommonDefaultValueUpdater" xmlfile="../sqlscript/default_values/taxformula.xml"/>
+  <conf name="taxarea" 	    			class="com.gofrugal.raymedi.common.util.CommonDefaultValueUpdater" xmlfile="../sqlscript/default_values/taxarea.xml"/>	  
+  <conf name="itemfavorites" 	        class="com.gofrugal.raymedi.common.util.CommonDefaultValueUpdater" xmlfile="../sqlscript/default_values/itemfavorites.xml"/>
+  <conf name="apipermissions" 	        class="com.gofrugal.raymedi.common.util.CommonDefaultValueUpdater" xmlfile="../sqlscript/default_values/apipermissions.xml"/>
+  <conf name="config" 	                class="com.gofrugal.raymedi.common.util.CommonDefaultValueUpdater" xmlfile="../sqlscript/default_values/configurations.xml"/>
+</defaultconfig>

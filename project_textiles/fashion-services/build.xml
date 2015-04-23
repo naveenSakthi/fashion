@@ -1,0 +1,215 @@
+<project name="Fashion Services" default="compile" basedir="." xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+  <description>
+    Fashion Services  build script.
+  </description>
+
+  <property environment="env"/>
+  <property file="ant.properties"/>
+  <property name="fashion" location="."/>
+  <property name="src" location="${fashion}/src"/>
+  <property name="class.output" location="${fashion}/classes"/>
+  <property name="package.dir"  location="${fashion}/output"/>
+  <property name="package.dir.app"  location="${fashion}/output/fashion-services"/>
+  <property name="package.dir.tomcat"  location="${fashion}/../tomcat"/>
+  <!--property name="webinf.unobfuscate.classes" location="${hq}/web/WEB-INF/unobfuscate_classes"/-->
+
+  <!--target name="init">
+    <! Create the time stamp > 
+
+    <! Create the build directory structure used by compile >
+    <mkdir dir="${class.output}"/>
+    <condition property="is.jre15">
+      <and>
+        <contains substring="1.5." string="${java.runtime.version}" />
+      </and>
+    </condition> 
+    <echo message="java.runtime.version = ${java.runtime.version} and is_jre=${is.jre15} "/>
+
+    <mkdir dir="${class.output}/com/gofrugal/qsr"/>
+	<echo>
+    <echo file="${class.output}/com/gofrugal/qsr/build.properties">
+      build.common.datetime=${touch.time}
+      build.common.version=${common_branch_name}
+    </echo>
+
+  </target-->
+
+
+  <target name="cleanup" unless="skip.cleanup">
+    <delete dir="${class.output}"/>  
+    <mkdir dir="${class.output}"/>  
+    <delete file="${fashion}/unobfuscate/*.jar}"/>
+  </target>
+
+  <target name="compile_core">	
+    <!-- Compile the java code from ${src} into ${build} -->
+    <echo>
+      classpath=${server.classpath}
+    </echo>
+    <!--antcall target="yaml_validation"/-->
+    <javac srcdir="${src}" destdir="${class.output}" classpath="${server.classpath}"
+      fork="true"
+      debug="${build.debug.value}"
+      debuglevel="${build.debuglevel.value}"
+      />
+    <antcall target="create_jar"/>
+  </target>
+
+  <target name="compile" depends="cleanup"
+    description="compile the source " >
+    <antcall target="update_dev_deps"/>
+    <antcall target="compile_core"/>
+  </target>
+
+  <target name="create_jar">
+    <jar destfile="${fashion}/unobfuscate/fashion_lib.jar" >
+      <fileset dir="${class.output}" excludes="t_ins/**,internal/**"/>
+    </jar>
+    <copy file="${fashion}/unobfuscate/fashion_lib.jar" todir="${fashion}/web/WEB-INF/lib"/>
+  </target>
+
+
+  <!-- Common build, Extract SmartAPI -->
+  <target name="update_dev_deps">
+    <property file="deps.properties"/>
+    <condition property="release">
+      <equals arg1="release" arg2="${raymedi_common}" casesensitive="false"/>
+    </condition>
+    <condition property="daily">
+      <equals arg1="daily" arg2="${raymedi_common}" casesensitive="false"/>
+    </condition>
+
+    <mkdir dir="cache"/>
+    <tstamp>
+      <format property="tid"  pattern="yyyyMMdd_HHmmss" />
+    </tstamp>
+
+    <antcall target="get_common_daily"/>
+    <antcall target="get_common_release"/>
+
+    <unzip src="cache/RayMedi_common_layer.zip" dest="${hq}"/>
+    <delete dir="${hq}/web/com.gofrugal.raymedi.common.preprint.preprintdesign"/>
+    <delete dir="${hq}/web/com.gofrugal.raymedi.common.batchprint.batchprinting"/>
+    <delete dir="${hq}/web/com.gofrugal.raymedi.common.mfw.MFW"/>
+    <delete dir="${hq}/web/alertsApp"/>
+    <delete dir="${hq}/web/license"/>
+    <delete file="${hq}/web/print.jar"/>
+    <delete file="${wlib}/RayMedi_gwt_lib.jar"/>
+    <delete file="${wlib}/gft_license_lib.jar"/>
+    <delete file="${wlib}/gft_alerts_lib.jar"/>
+  </target>
+
+  <!-- Setup Tomcat -->
+  <condition property="is.tomcat.present">
+    <available file="${hq}/../tomcat" type="dir"/>
+  </condition>
+  <target name="setup_tomcat">
+    <unzip src="pkzip/tomcat.zip" dest="${hq}/../"/>
+    <copy todir="${hq}/../tomcat/" >
+      <fileset dir="${hq}/package/tomcat"/>
+    </copy>
+    <move file="${hq}/web/WEB-INF/lib/mysql-connector.jar" todir="${hq}/../tomcat/lib"/>
+    <move file="${hq}/web/WEB-INF/lib/javassist.jar" todir="${hq}/../tomcat/lib"/>
+    <move file="${hq}/web/WEB-INF/lib/slf4j-api.jar" todir="${hq}/../tomcat/lib"/>
+    <move file="${hq}/web/WEB-INF/lib/slf4j-simple.jar" todir="${hq}/../tomcat/lib"/>
+    <move file="${hq}/web/WEB-INF/lib/redis-session-manager-tomcat.jar" todir="${hq}/../tomcat/lib"/>
+    <move file="${hq}/web/WEB-INF/lib/jedis.jar" todir="${hq}/../tomcat/lib"/>
+    <move file="${hq}/web/WEB-INF/lib/commons-pool.jar" todir="${hq}/../tomcat/lib"/>
+    <move file="${hq}/web/WEB-INF/lib/HikariCP.jar" todir="${hq}/../tomcat/lib"/>
+    <chmod dir="${hq}/../tomcat/bin" perm="ugo+rx" includes="**/*.sh"/>
+    <mkdir dir="${hq}/../tomcat/temp"/>
+  </target>
+
+  <target name="configure_db">
+    <mkdir dir="${class.output}"/>
+    <mkdir dir="${class.output}/com/gofrugal/fashion/schema"/>
+    <javac srcdir="${src}" destdir="${class.output}" 
+      classpath="${server.classpath}"
+      includes="com/gofrugal/fashion/schema/DbConfigGenerator.java"
+      fork="true"
+      memoryinitialsize="256m"
+      memorymaximumsize="256m"
+      debug="${build.debug.value}"
+      debuglevel="${build.debuglevel.value}" />
+
+    <java  classname="com.gofrugal.fashion.schema.DbConfigGenerator" 
+      classpath="${class.output}:${server.classpath}"
+      fork="true" failonerror="true">
+      <arg value="${f}/dev_help"/>
+    </java>  
+  </target>
+
+  <!-- Setup development environment for the first time -->
+  <target name="setup">
+    <ant target="get_deps"/>
+    <ant target="setup_tomcat"/>
+    <ant target="configure_db"/>
+  </target>
+
+  <!-- Create application package -->
+  <target name="create_package_zip">
+    <tstamp>
+      <format property="touch.time" pattern="dd-MM-yyyy hh:mm aa"/>
+      <format property="layer.date" pattern="dd-MM-yyyy"/>
+    </tstamp>
+
+    <copy todir="${package.dir.app}/web">
+      <fileset dir="${hq}/web">
+        <exclude name="**/common_web/**"/>
+        <exclude name="**/index.html"/>
+      </fileset>
+    </copy>
+    <copy todir="${package.dir.app}/api">
+      <fileset dir="${hq}/api"/>
+    </copy>
+    <copy todir="${package.dir.app}/sqlscript">
+      <fileset dir="${hq}/sqlscript"/>
+    </copy>
+    <copy todir="${package.dir.app}/dev_help">
+      <fileset dir="${hq}/dev_help">
+        <include name="**/*.sh"/>
+        <include name="**/patch.properties"/>
+        <include name="quartz.properties"/>
+        <include name="**/*.xml"/>
+        <include name="**/db_config.ini.sample"/>
+      </fileset>
+    </copy>
+    <zip destfile="${hq}/gofrugal_servquick_setup.zip">
+      <zipfileset dir="${package.dir}"/>
+      <zipfileset dir="${package.dir.tomcat}" prefix="tomcat">
+        <exclude name="**/servquick.xml"/>
+      </zipfileset>
+    </zip>
+    <zip destfile="${hq}/gofrugal_servquick_patch.zip">
+      <zipfileset dir="${package.dir}"/>
+     <zipfileset dir="${package.dir.tomcat}" prefix="tomcat">
+        <include name="**/servquick.xml.template"/>
+        <include name="lib/javassist.jar"/>
+        <include name="lib/mysql-connector.jar"/>
+        <include name="lib/jedis.jar"/>
+        <include name="lib/redis-session-manager-tomcat.jar"/>
+        <include name="lib/commons-pool.jar"/>
+        <include name="lib/slf4j-simple.jar"/>
+      </zipfileset>
+	</zip>
+    <echo file="${f}/latest.properties">
+      dir=${layer.date}
+      build.datetime=${touch.time}
+    </echo>
+  </target>
+
+
+  <!-- Package application -->
+  <target name="package">
+    <mkdir dir="${package.dir}"/>
+    <delete dir="${package.dir}"/>
+    <mkdir dir="${package.dir}"/>
+    <mkdir dir="${package.dir.app}"/>
+    <mkdir dir="${package.dir.tomcat}"/>  
+    <delete dir="${package.dir.tomcat}"/>
+    <antcall target="setup_tomcat"/>
+    <antcall target="compile"/>
+    <antcall target="create_package_zip"/>
+  </target>
+
+</project>

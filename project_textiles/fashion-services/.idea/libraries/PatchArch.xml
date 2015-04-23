@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="PatchArch">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dev_help/log/PatchArch/oldlog_20140729122831.zip!/" />
+      <root url="jar://$PROJECT_DIR$/dev_help/log/PatchArch/oldlog_20140728104508.zip!/" />
+      <root url="jar://$PROJECT_DIR$/dev_help/log/PatchArch/oldlog_20140723205558.zip!/" />
+      <root url="jar://$PROJECT_DIR$/dev_help/log/PatchArch/oldlog_20140728104855.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

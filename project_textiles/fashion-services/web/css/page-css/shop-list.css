@@ -1,0 +1,108 @@
+.custom-header-size{
+  text-transform: none;
+  font-size: 18px;
+  margin-top: 60px;
+  text-align:left;
+}
+.filter-heading{
+  font-size: 12px;
+  font-weight: bold;
+  width: inherit;
+  padding: 5px 0 2px 0;
+}
+.list-group .filter-box{
+  margin-top: 8px;
+}
+.list-group .filter-box .filter-input{
+  border-left: none;
+  border-right: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: white;
+  border-color: #f1f2f7;
+  box-shadow: none;
+}
+.list-group .filter-box .input-group-addon{
+  background: white;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-color: #f1f2f7;
+  cursor: pointer;
+}
+.right-border{
+  border:1px solid #eeeee;
+}
+.remove-bottom-border{
+  border-bottom:none;
+}
+ul.filter-list li{
+  list-style: none;
+padding: 5px 0 5px 14px;
+font-size: 12px;
+text-align: left;
+
+}
+.shop-detail-box{
+  border: none;
+  font-size: 14px;
+  text-align: left;
+  box-shadow: 0 0 1px 0px gray, 2px 1px 2px 0px rgba(10, 10, 0, 0.5);
+}
+.shop-address .line-one{
+  font-weight: bolder;
+  color: #24AFFF;
+  font-size: 16px;
+  /*text-shadow: 1px 1px #24AFFF;*/
+}
+.shop-address .line-two{
+  position: relative;
+  top:-2px;
+  font-weight: lighter;
+  color: #24AFFF;
+  font-size: 13px;
+}
+.shop-address .line-three{
+  font-weight: lighter;
+}
+.shop-address .line-three .sub-text{
+  font-size: 13px;
+  color: #bfbdbd;
+}
+.shop-address .line-four{
+  font-size: 13px;
+  font-weight: lighter;
+}
+.shop-tag{
+  position: relative;
+  /*top:-10px;*/
+}
+.shop-tag span{
+  font-size: 12px;
+  border: 1px solid #bfbdbd;
+  border-radius: 4px;
+  padding: 3px 4px 3px 4px;
+  margin:4px 0 4px 0;
+  display: block;
+  cursor: pointer;
+}
+.shop-tag span:hover{
+    border: 1px solid gray;
+    transition: 0.5s border;
+}
+.rating-box{
+  position: relative;
+  padding: 2px;
+  margin: 5px;
+  background: #ff0030;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px dashed #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px #ff0030, 2px 1px 4px 2px rgba(10, 10, 0, 0.5);
+  text-shadow: -1px -1px #aa3030;
+  font-weight: normal;
+  /*width: 70px;*/
+
+}
