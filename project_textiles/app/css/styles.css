@@ -229,7 +229,7 @@ h4,
 h5,
 h6 {
 	font-family: 'Raleway', sans-serif;
-	color: #323232;
+	/*color: #323232;*/
 	margin-bottom: 0;
 	margin-top: 0;
 }
@@ -358,7 +358,7 @@ header .vertical-registration-form {
 }
 
 .navigation-header {
-	padding-top: 47px;
+	/*padding-top: 0;*/
 	padding-bottom: 30px;
 }
 
@@ -941,4 +941,26 @@ footer {
 }
 .list-group-padding{
 	padding-bottom:10px;
+}
+
+.btn-category{
+	width:200px;
+	padding:12px 72px !important;
+}
+.btn-category:hover{
+	border: 2px solid #0196A7;
+	font-weight: bold;
+}
+.btn-category.active{
+	border: 2px solid #0196A7;
+	font-weight: bold;
+}
+.sub-heading{
+	padding-top:10px;
+}
+.features{
+	box-shadow: 0px -5px 5px -4px #0196A7;
+	margin-bottom: 25px;
+	/*box-shadow: 0px -3px 8px 0px #0196A7;*/
+	/*box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;*/
 }

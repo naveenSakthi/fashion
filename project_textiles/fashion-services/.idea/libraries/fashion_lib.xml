@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="fashion_lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/unobfuscate/fashion_lib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

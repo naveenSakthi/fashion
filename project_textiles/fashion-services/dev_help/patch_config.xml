@@ -1,0 +1,4 @@
+<patchconfig>
+  <conf type="ServQuick_Views" name="create_view" class="com.gofrugal.raymedi.common.util.PatchSQL" xmlfile="../sqlscript/views/#dbname#/create_view.xml"/> 
+  <conf type="ServQuick_Default_Value_Update" name="default_config" class="com.gofrugal.raymedi.common.util.DefaultValueUpdate" xmlfile="./default_value_config.xml"/>
+</patchconfig>

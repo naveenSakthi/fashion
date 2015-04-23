@@ -1,0 +1,46 @@
+<div class="color-overlay">  
+    <div>   
+        <div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#landx-navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><h4><span class="strong colored-text">Fashion</span> World</h4></a>
+                   </div>
+                
+            </div>         
+        </div>     
+    </div>  
+</div>
+<section class="section1 bgcolor-2" id="section1">
+    <div class="container target custom-nav bgcolor-2">
+      <div class="row">
+        <div id="offerSelection" class="col-sm-2" ng-init="offerCategories=[{'name':'Food','isSelected':'0'},{'name':'Entertainment','isSelected':'0'},{'name':'Kids','isSelected':'0'},{'name':'Lifestyle','isSelected':'0'},{'name':'Jwellery','isSelected':'0'}]">
+          <ul class="list-group">
+              <li class="list-group-item text-left"><strong>CATEGORIES </strong>
+              </li>
+              <li class="list-group-item text-left sortable" ng-repeat="o in offerCategories" ng-click="toggleOfferCategorySelection(o)"><input type="checkbox" ng-true-value="1" ng-false-value="0" ng-model="o.isSelected"/>{{o.name}}</li>
+          </ul>
+        </div>
+        <div id="offerList" class="col-sm-10" ng-init="offerData=[{'url':'http://letstalkpayments.com/wp-content/uploads/2014/09/Just-Over-a-Year-after-Launch-Flipkart-Shuts-Down-its-Payment-Gateway-PayZippy.jpg','amount':'0','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer1','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'},{'url':'http://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Dominos_pizza_logo.svg/2000px-Dominos_pizza_logo.svg.png','amount':'5','header':'Earn Rs.25 in your free recharge credits.','subHeader':'Valid against min bill $1500','tc':'This is terms and conditions for this offer2','saveAmount':'25','expiry':'25 March 2015'}]">
+          <div class="col-sm-3" ng-repeat="od in offerData">
+            <div class="well well-sm">
+              <div class="thumbnail">
+                 <img src="{{od.url}}" alt="Generic placeholder thumbnail" style="height: 150px">
+              </div>
+              <button class="btn btn-success" style="margin-top: -70px">pick up for ${{od.amount}}</button>
+              <div class="caption text-left" style="margin-top: -20px">
+                 <h3 style="word-wrap: break-word">{{od.header}}</h3>
+                 <p>{{od.subHeader}}.</p>
+                 <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
