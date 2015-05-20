@@ -1,0 +1,285 @@
+.highlight {
+  background: blue;
+}
+.my-wrapper {
+  width: 100%;
+  padding: 0;
+}
+.navbar-logo {
+  padding-left: 40px;
+}
+.user-options {
+  padding-right: 40px;
+}
+.init-search-option {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  top: 22%;
+}
+.init-search-option .input-group {
+  display: inline-block;
+}
+.init-search-option .input-group button {
+  top: -13px;
+  position: relative;
+}
+.top-container,
+.top-most {
+  height: 300px;
+  background: url('../../images/top-bg.jpg') repeat;
+  color: black;
+}
+.top-most:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.tab-container {
+  text-align: center;
+  background: #dddddd;
+  min-height: 450px;
+  padding-top: 15px;
+}
+.tab-container h2 {
+  margin-top: 10px;
+}
+.tab-container ul.nav-tabs > li {
+  float: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+.tab-container ul.nav-tabs > li > a {
+  padding: 10px 65px;
+  font-weight: bold;
+}
+.tab-container .nav-tabs {
+  border-bottom: 4px solid white;
+}
+.tab-container .browse-all {
+  margin: 20px 0 35px 0;
+  padding: 10px 25px;
+  text-transform: uppercase;
+}
+.pulse-container {
+  text-align: center;
+  height: 145px;
+  background-image: url('images/top-bg.jpg') repeat;
+  background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.pulse-container h2 {
+  margin-top: 10px;
+}
+.pulse-container .pulse-title {
+  color: white;
+  margin-top: 8px;
+  font-size: 30px;
+}
+.latest-update-container {
+  min-height: 200px;
+  background: #dddddd;
+  padding-bottom: 40px;
+}
+.latest-update-container h2 {
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.press-container {
+  background: white;
+  height: 150px;
+  text-align: center;
+  clear: both;
+}
+.press-container h2 {
+  padding: 20px;
+}
+.press-container span.quotes {
+  font-size: 36px;
+  color: gray;
+}
+.press-container .quote-text {
+  font-size: 20px;
+  font-style: italic;
+}
+.newsletter-container {
+  min-height: 100px;
+  background: url('../../images/top-bg.jpg') repeat;
+  text-align: center;
+}
+.newsletter-container h2 {
+  padding: 20px;
+  text-transform: uppercase;
+  margin-bottom: -25px;
+}
+.newsletter-container .sub-text {
+  padding: 15px;
+}
+.newsletter-container .subscribe-block {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.newsletter-container .subscribe-block .input-group {
+  display: inline-block;
+}
+.newsletter-container:before {
+  /*content: " ";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);*/
+}
+.footer-container {
+  background: gray;
+  min-height: 150px;
+  text-align: center;
+}
+.footer-container .footer-content {
+  padding-top: 20px;
+}
+.footer-container .footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-container .footer-content ul li {
+  display: inline-block;
+  padding: 5px 10px;
+}
+.footer-container .copy-rights {
+  margin-top: 10px;
+  padding-top: 20px;
+  border-top: 1px solid white;
+}
+.navbar-icon {
+  padding-right: 20px;
+}
+.navbar-icon .search {
+  display: inline-block;
+}
+.navbar-icon i {
+  color: white;
+  font-size: 16px;
+}
+.detail-box {
+  position: relative;
+  margin: 20px auto;
+  border: 1px solid black;
+  width: 200px;
+  height: 255px;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.detail-box img {
+  height: inherit;
+  width: inherit;
+}
+.detail-box .info-text {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  margin: 0 auto;
+  bottom: 50%;
+}
+.detail-box:hover .on-over {
+  left: 0%;
+  transition: left ease 0.5s;
+}
+.detail-box .on-over {
+  height: 90px;
+  background: white;
+  position: absolute;
+  bottom: -1px;
+  width: inherit;
+  left: -100%;
+}
+.detail-box .on-over .duration {
+  padding: 10px 0 16px 0;
+  display: block;
+}
+.detail-box .on-over .shop-name {
+  padding: 8px 30px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.latest-box {
+  position: relative;
+  height: 400px;
+  width: 350px;
+  margin: 30 auto;
+  border: 1px solid black;
+  background: white;
+}
+.latest-box img {
+  position: absolute;
+  top: 0;
+  height: 200px;
+  width: inherit;
+  border-bottom: 1px solid #dddddd;
+}
+.latest-box .description {
+  position: relative;
+  top: 210px;
+  padding: 10px;
+  text-align: justify;
+}
+.latest-box .description .block-title {
+  font-size: 22px;
+  padding: 26px 0 10px 0;
+}
+.latest-box .description .date {
+  float: left;
+}
+.latest-box .read-more {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+}
+.btn-outline-default {
+  border: 1px solid #f1f2f7;
+  background: white;
+  border-radius: 2px;
+}
+.btn-outline-default:hover {
+  border: 1px solid #d1d4e4;
+}
+.btn-outline-primary {
+  border: 1px solid #3b9ff3;
+  background: white;
+  border-radius: 2px;
+}
+.btn-outline-primary.strong {
+  border: 2px solid #3b9ff3;
+}
+.btn-outline-primary:hover {
+  border: 2px solid #3b9ff3;
+}
+.btn-search {
+  background-color: #fa8500;
+  color: white;
+  padding: 5px 8px;
+}
+.btn-search:hover {
+  background-color: #e17700;
+  color: white;
+}
+.btn-subscribe {
+  background-color: #05ad43;
+  color: white;
+  padding: 5px 8px;
+}
+.btn-subscribe:hover {
+  background-color: #049439;
+  color: white;
+}
