@@ -1,2 +1,0 @@
-29 Jul, 2014 12:28:31 PM com.gofrugal.raymedi.common.util.SystemUtil deleteDirectoryFiles
-INFO: Delete file ::/home/admin/workspace/qsr/qsr-services/dev_help/log/old_log_20140729122831/patchdb_debug.txt

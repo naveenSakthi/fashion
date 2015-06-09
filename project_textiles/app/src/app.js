@@ -15,20 +15,19 @@ var fashionApp = angular.module('fashionApp', ["ui.router"])
         })
          .state('shops', {
             url: "/shops",
-            templateUrl: 'src/ views/shop-list.tpl.html',
+            templateUrl: 'src/views/shop-list.tpl.html',
         })
          .state('main.shop-detail', {
             url: "/shop-detail",
             templateUrl: 'src/views/shop-detail.tpl.html',
         })
-         .state('main.user', {
+         .state('user', {
             url: "/user",
             templateUrl: 'src/views/user.tpl.html',
         })
-         .state('main.offers', {
+         .state('offers', {
             url: "/offers",
-            templateUrl: 'src/views/offer.tpl.html',
+            templateUrl: 'src/views/offer-list.tpl.html',
         })
-
 
     })

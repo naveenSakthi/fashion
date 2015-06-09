@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('fasionApp').service('$api', function($http, $q) {
+angular.module('fashionApp').service('$api', function($http, $q) {
 
   if (!$http.defaults.headers.get) {
     $http.defaults.headers.get = {};
@@ -11,8 +11,8 @@ angular.module('fasionApp').service('$api', function($http, $q) {
   var $api = function(endPoint) {
     var _endpointUrl = baseUrl + endPoint;
 
-    this.list = function(searchRequest) {
-      return $http.get(_endpointUrl + searchQuery ,{cache:false});
+    this.list = function() {
+      return $http.get(_endpointUrl ,{cache:false});
     };
 
     this.get = function(id) {

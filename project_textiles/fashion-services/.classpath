@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry excluding="api/v1/|api/|cache/|classes/com/gofrugal/qsr/auth/|classes/com/gofrugal/qsr/file/|classes/com/gofrugal/qsr/handler/|classes/com/gofrugal/qsr/schema/|classes/com/gofrugal/qsr/servlet/|classes/com/gofrugal/qsr/util/|classes/com/gofrugal/qsr/|classes/com/gofrugal/|classes/com/|classes/|dev_help/|unobfuscate/|web/|m2/SmartTools/SmartAPI/|m2/SmartTools/|m2/|pkzip/|sqlscript/" kind="src" path=""/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>
