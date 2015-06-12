@@ -1,15 +1,12 @@
 var fashionApp = angular.module('fashionApp', ["ui.router"])
     fashionApp.config(function($stateProvider){
     $stateProvider
-        .state('main', {
+        .state('home', {
             url: "",
-            templateUrl: 'src/views/main.tpl.html',
-        })
-        .state('main.home', {
-            url: "/",
             templateUrl: 'src/views/home.tpl.html',
+            controller:'homeController'
         })
-        .state('main.categories', {
+        .state('categories', {
             url: "/categories",
             templateUrl: 'src/views/category-list.tpl.html',
         })
@@ -17,7 +14,7 @@ var fashionApp = angular.module('fashionApp', ["ui.router"])
             url: "/shops",
             templateUrl: 'src/views/shop-list.tpl.html',
         })
-         .state('main.shop-detail', {
+         .state('shop-detail', {
             url: "/shop-detail",
             templateUrl: 'src/views/shop-detail.tpl.html',
         })

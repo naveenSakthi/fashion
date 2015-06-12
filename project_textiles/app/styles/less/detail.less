@@ -1,0 +1,111 @@
+.detail-header {
+    height: 250px;
+    background: url('../../images/top-bg.jpg') repeat;
+    color: #3d4d65;
+    margin-bottom: 20px;
+}
+.address-box {
+    text-align: left;
+}
+
+.branch-box {
+    ul {
+        padding: 0;
+        >li {
+            list-style: none;
+        }
+    }
+}
+
+.map-box {
+    ul {
+        padding: 0;
+        >li {
+            list-style: none;
+            display: inline-block;
+            span {
+                display: block;
+                &.number {
+                    font-weight: bold;
+                }
+                &.caption {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.timing-box {
+    div.list {
+        span.status {
+            float: right;
+            border-radius: 8px;
+            padding: 2px 4px 2px 4px;
+            background: green;
+            color: white;
+        }
+    }
+}
+
+.offer-box {
+    ul {
+        padding: 0;
+        border-bottom: 1px solid gray;
+        >li {
+            list-style: none;
+            padding: 5px;
+            .tag-icon {
+                background-color: green;
+            }
+            .offer-title {
+                font-weight: bold;
+            }
+            .offer-subtext {
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.sticky-tags {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    &.warning {
+        background-color: yellow;
+        color: white;
+    }
+    &.success {
+        background-color: green;
+        color: white;
+    }
+    &.failure {
+        background-color: red;
+        color: white;
+    }
+    &.middle {
+        background-color: blue;
+        color: white;
+    }
+}
+
+.category-list,.brand-list{
+    ul {
+        padding: 0;
+        >li {
+            list-style: none;
+            padding: 5px 2px;
+        }
+    }
+}
+
+.photo-list{
+  img{
+    height:150px;
+    width:200px;
+    display: inline-block;
+    padding: 5px;
+  }
+}

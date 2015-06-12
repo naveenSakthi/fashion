@@ -30,11 +30,11 @@ body {
   display: inline-block;
 }
 .init-search-option .input-group button {
-  top: 7px;
+  top: -13px;
   position: relative;
 }
 .top-most {
-  height: 500px;   /* todo */
+  height: 300px;
   background: url('../../images/top-bg.jpg') repeat;
   color: #3d4d65;
 }
