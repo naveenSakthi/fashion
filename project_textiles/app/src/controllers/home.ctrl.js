@@ -2,6 +2,12 @@ angular.module('fashionApp').controller('homeController',function($scope,dataFac
 	dataFactory.get('src/controllers/states.json').then(function(data){
 		$scope.items=data;
 	});
+	dataFactory.get('src/controllers/offers.json').then(function(data){
+		$scope.offers=data;
+	});
+	dataFactory.get('src/controllers/brands.json').then(function(data){
+		$scope.brands=data;
+	});
 
 	$scope.name="";
 	$scope.onItemSelected=function(){

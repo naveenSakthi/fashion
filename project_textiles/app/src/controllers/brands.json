@@ -1,0 +1,37 @@
+[
+	{
+		"id":1,
+		"name":"pepe",
+		"logo":"",
+		"description":"",
+		"showRooms":"50",
+		"places":"20",
+		"types":[{
+			"id":1,
+			"name":""
+			}],
+		"categories":[{
+			"id":1,
+			"name":""
+			}]
+
+	},
+	{
+		"id":2,
+		"name":"Lee",
+		"logo":"",
+		"description":"",
+		"showRooms":"20",
+		"places":"50",
+		"types":[{
+			"id":1,
+			"name":""
+			}],
+		"categories":[{
+			"id":1,
+			"name":""
+			}]
+
+	}
+
+]
