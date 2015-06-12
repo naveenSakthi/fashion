@@ -2,10 +2,15 @@ angular.module('fashionApp').controller('homeController',function($scope,dataFac
 	dataFactory.get('src/controllers/states.json').then(function(data){
 		$scope.items=data;
 	});
+
 	$scope.name="";
 	$scope.onItemSelected=function(){
 		console.log('selected='+$scope.name);
-	}
+	};
+	$scope.currentTab='offer';
+	$scope.switchTab=function(data){
+		$scope.currentTab=data;
+	};	
 });
 
 angular.module('fashionApp').directive('typeahead', function($timeout) {

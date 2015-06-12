@@ -37,10 +37,10 @@
 <div class="container tab-container col-md-12">
     <h2>More Collections</h2>
     <ul class="nav nav-tabs">
-        <li role="presentation" class="active"><a href="#">Offer</a></li>
-        <li role="presentation"><a href="#">Category</a></li>
-        <li role="presentation"><a href="#">Brand</a></li>
-        <li role="presentation"><a href="#">Popular</a></li>
+        <li role="presentation" ng-class="{'active':currentTab == 'offer'}"><a href="#" ng-click="switchTab('offer')">Offer</a></li>
+        <li role="presentation" ng-class="{'active':currentTab == 'category'}"><a href="#" ng-click="switchTab('category')">Category</a></li>
+        <li role="presentation" ng-class="{'active':currentTab == 'brand'}"><a href="#" ng-click="switchTab('brand')">Brand</a></li>
+        <li role="presentation" ng-class="{'active':currentTab == 'popular'}"><a href="#" ng-click="switchTab('popular')">Popular</a></li>
     </ul>
     <!-- tab-content -->
     <div class="row">
@@ -82,6 +82,54 @@
                 </div>
             </div>
             <div class="col-md-3 ">
+                <div class="detail-box">
+                    <img src="images/temp/profile-1.jpg" alt="">
+                    <div class="info-text">
+                        20% OFFER on Casualss
+                    </div>
+                    <div class="on-over">
+                        <span class="duration">Valid till</span>
+                        <span class="shop-name btn-outline-primary strong">i-Style</span>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3 col-xs-6">
+                <div class="detail-box">
+                    <img src="images/temp/profile-1.jpg" alt="">
+                    <div class="info-text">
+                        20% OFFER on Casualss
+                    </div>
+                    <div class="on-over">
+                        <span class="duration">Valid till</span>
+                        <span class="shop-name btn-outline-primary strong">i-Style</span>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3 col-xs-6">
+                <div class="detail-box">
+                    <img src="images/temp/profile-1.jpg" alt="">
+                    <div class="info-text">
+                        20% OFFER on Casualss
+                    </div>
+                    <div class="on-over">
+                        <span class="duration">Valid till</span>
+                        <span class="shop-name btn-outline-primary strong">i-Style</span>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3 col-xs-6">
+                <div class="detail-box">
+                    <img src="images/temp/profile-1.jpg" alt="">
+                    <div class="info-text">
+                        20% OFFER on Casualss
+                    </div>
+                    <div class="on-over">
+                        <span class="duration">Valid till</span>
+                        <span class="shop-name btn-outline-primary strong">i-Style</span>
+                    </div>
+                </div>
+            </div>
+             <div class="col-md-3 col-xs-6">
                 <div class="detail-box">
                     <img src="images/temp/profile-1.jpg" alt="">
                     <div class="info-text">
@@ -261,7 +309,7 @@
         <ul>
             <li>Home</li>
             <li>Offers</li>
-            <li>Logo</li>
+            <li>Brands</li>
             <li>Articles</li>
             <li>About us</li>
         </ul>
