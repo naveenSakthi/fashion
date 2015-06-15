@@ -8,6 +8,12 @@ angular.module('fashionApp').controller('homeController',function($scope,dataFac
 	dataFactory.get('src/controllers/brands.json').then(function(data){
 		$scope.brands=data;
 	});
+	dataFactory.get('src/controllers/categories.json').then(function(data){
+		$scope.categories=data;
+	});
+	dataFactory.get('src/controllers/categories.json').then(function(data){
+		$scope.categories=data;
+	});
 
 	$scope.name="";
 	$scope.onItemSelected=function(){

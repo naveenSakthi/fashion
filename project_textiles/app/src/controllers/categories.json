@@ -1,0 +1,50 @@
+[
+	{
+		"id":1,
+		"name":"Ethinic wearr",
+		"imageUrl":"",
+		"typeId":1,
+		"typeName":"womens"
+
+	},
+	{
+		"id":2,
+		"name":"Western wear",
+		"imageUrl":"",
+		"typeId":1,
+		"typeName":"womens"
+
+	},
+	{
+		"id":3,
+		"name":"Winter wear",
+		"imageUrl":"",
+		"typeId":1,
+		"typeName":"womens"
+
+	},
+	{
+		"id":4,
+		"name":"Bottom wear",
+		"imageUrl":"",
+		"typeId":1,
+		"typeName":"womens"
+
+	},
+	{
+		"id":5,
+		"name":"LingerIE",
+		"imageUrl":"",
+		"typeId":1,
+		"typeName":"womens"
+
+	},
+	{
+		"id":6,
+		"name":"Duppatas",
+		"imageUrl":"",
+		"typeId":1,
+		"typeName":"womens"
+
+	}
+]
