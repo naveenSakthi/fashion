@@ -1,6 +1,6 @@
 angular.module('fashionApp').controller('homeController',function($scope,dataFactory){
-	dataFactory.get('src/controllers/states.json').then(function(data){
-		$scope.items=data;
+	dataFactory.get('src/controllers/search.json').then(function(data){
+		$scope.searchData=data;
 	});
 	dataFactory.get('src/controllers/offers.json').then(function(data){
 		$scope.offers=data;
@@ -11,52 +11,28 @@ angular.module('fashionApp').controller('homeController',function($scope,dataFac
 	dataFactory.get('src/controllers/categories.json').then(function(data){
 		$scope.categories=data;
 	});
-	dataFactory.get('src/controllers/categories.json').then(function(data){
-		$scope.categories=data;
+	dataFactory.get('src/controllers/populars.json').then(function(data){
+		$scope.populars=data;
+	});
+	dataFactory.get('src/controllers/latestUpdates.json').then(function(data){
+		$scope.updates=data;
 	});
 
-	$scope.name="";
-	$scope.onItemSelected=function(){
-		console.log('selected='+$scope.name);
+
+	var commonData={
+	    users:300,
+	    shops:300,
+	    articals:200,
+	    press:'Ultimate work from the guys. Which will be a landmark....Explore the trend from here..'
 	};
+	$scope.appDetails=commonData;
 	$scope.currentTab='offer';
 	$scope.switchTab=function(data){
 		$scope.currentTab=data;
 	};	
 });
 
-angular.module('fashionApp').directive('typeahead', function($timeout) {
-  return {
-    restrict: 'AEC',
-    scope: {
-		items: '=',
-		prompt:'@',
-		title: '@',
-		subtitle:'@',
-		model: '=',
-		onSelect:'&'
-	},
-	link:function(scope,elem,attrs){
-	   scope.handleSelection=function(selectedItem){
-		 scope.model=selectedItem;
-		 scope.current=0;
-		 scope.selected=true;        
-		 $timeout(function(){
-			 scope.onSelect();
-		  },200);
-	  };
-	  scope.current=0;
-	  scope.selected=true;
-	  scope.isCurrent=function(index){
-		 return scope.current==index;
-	  };
-	  scope.setCurrent=function(index){
-		 scope.current=index;
-	  };
-	},
-    templateUrl: 'src/controllers/templateurl.html'
-  }
-});
+
 
 angular.module('fashionApp').factory('dataFactory', function($http) {
   return {

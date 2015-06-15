@@ -1,0 +1,26 @@
+[
+	{
+		"id":1,
+		"searchName":"levis",
+		"searchType":"brands", 
+		"searchId":"2",
+		"places":"10"
+	
+	},
+	{
+		"id":2,
+		"searchName":"adyar",
+		"searchType":"areas", 
+		"searchId":"1",
+		"places":""
+	
+	},
+	{
+		"id":3,
+		"searchName":"casuals",
+		"searchType":"categories", 
+		"searchId":"1",
+		"places":"100"
+	
+	}
+]

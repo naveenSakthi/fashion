@@ -1,0 +1,23 @@
+[
+	{
+		"id":1,
+		"name":"Newly opened shops",
+		"imageUrl":"",
+		"places":20
+
+	},
+	{
+		"id":2,
+		"name":"Trendy this week",
+		"imageUrl":"",
+		"places":10
+
+	},
+	{
+		"id":3,
+		"name":"Office Special",
+		"imageUrl":"",
+		"places":15
+
+	}
+]

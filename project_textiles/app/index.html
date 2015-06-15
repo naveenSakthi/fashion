@@ -19,11 +19,17 @@
 ============================== -->
 <meta name="author" content="Naveen,Sankaranandh,Suriya">
 <meta name="keywords" content="fashion,trend,dress">
-<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 <!-- custom theme file -->
 <link rel="stylesheet" type="text/css" href="styles/css/theme.css">
 <link rel="stylesheet" type="text/css" href="styles/css/icomoon.css">
-
+ <style>
+            /* Needed for hiding crollbars when pushing */
+            
+            .ng-pageslide {
+                background: #eee;
+            }
+        </style>
 </head>
 
 <body ng-app="fashionApp">
@@ -42,13 +48,11 @@
 <script src="js/angular-ui-router/angular-ui-router.min.js"></script>
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/modernizr.js"></script>
-
-
-
+<script src="js/page-slide.js"></script>
+<script src="js/ui-bootstrap-tpls-0.13.0.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
 <script src="src/app.js"></script>
 <script src="src/controllers/home.ctrl.js"></script>
 
 </body>
 </html>
-
-

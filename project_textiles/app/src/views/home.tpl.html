@@ -20,11 +20,8 @@
                 </br> Search it, Wear it
             </div>
             <form>
-                <div class="input-group">
-                    <typeahead items="items" prompt="Start typing a city" title="name" subtitle="abbreviation" model="name" on-select="onItemSelected()" />
-                </div>
-                <div class="input-group">
-                    <typeahead items="items" prompt="Start typing a category" title="name" subtitle="abbreviation" model="name" on-select="onItemSelected()" />
+                <div class="input-group col-md-6">
+                     <input type="text" ng-model="selected" typeahead="search as search.searchName for search in searchData | filter:$viewValue | limitTo:8" class="form-control" typeahead-template-url="customTemplate.html">
                 </div>
                 <div class="input-group">
                     <button type="submit" class="btn btn-search">Search</button>
@@ -47,7 +44,7 @@
         <div class=" col-xs-12" ng-if="currentTab == 'offer'">
             <div class="col-md-2 col-xs-4" ng-repeat="offer in offers">
                 <div class="detail-box">
-                    <img src="images/temp/profile-1.jpg" alt="">
+                    <img ng-src="{{offer.imageUrl}}" alt="">
                     <div class="info-text">
                         {{offer.name}}
                     </div>
@@ -61,7 +58,7 @@
         <div class=" col-xs-12" ng-if="currentTab == 'brand'">
             <div class="col-md-2 col-xs-4" ng-repeat="brand in brands">
                 <div class="detail-box">
-                    <img src="images/temp/profile-1.jpg" alt="">
+                    <img ng-src="{{brand.logo}}" alt="">
                     <div class="on-over">
                         <span class="duration">Show rooms- {{brand.showRooms}}</span>                        
                         <span class="shop-name btn-outline-primary strong">{{brand.name}}</span>
@@ -70,9 +67,16 @@
             </div>
         </div>
         <div class=" col-xs-12" ng-if="currentTab == 'category'">
-            <div class="col-md-2 col-xs-4" ng-repeat="category in categories">
+        <h3>Ladies category</h3>
+            <div class="col-md-2 col-xs-4" ng-repeat="category in categories|filter:{typeId:1}">
                 <div class="img-div">
-                    <img src="http://placekitten.com/g/400/200" />
+                    <img ng-src="{{category.imageUrl}}" />
+                </div>
+            </div>
+            <h3>Mens category</h3>
+            <div class="col-md-2 col-xs-4" ng-repeat="category in categories|filter:{typeId:2}">
+                <div class="img-div">
+                    <img ng-src="{{category.imageUrl}}" />
                 </div>
             </div>
         </div>
@@ -83,19 +87,17 @@
 </div>
 
 
-
         
 
 <!-- tabs ends -->
 <!-- pulse block starts -->
 <div class="container pulse-container col-md-12">
-    <h2>Our pulse</h2>
     <div class="col-md-4">
         <div class="icons">
             <i class="icomoon-user"></i>
-            <span class="mention">653</span>
+            <span class="mention">{{appDetails.users}}</span>
             <div class="pulse-title">
-                Number of Recent <span class="strong"> Users </span>
+             <span class="strong"> Users </span>
             </div>
         </div>
 
@@ -103,18 +105,18 @@
     <div class="col-md-4">
         <div class="icons">
             <i class="icomoon-price-tag"></i>
-            <span class="mention">653</span>
+            <span class="mention">{{appDetails.shops}}</span>
             <div class="pulse-title">
-            Recently added <span class="strong">Shops</span>
+            <span class="strong">Shops</span>
             </div>
         </div>
     </div>
     <div class="col-md-4">
         <div class="icons">
             <i class="icomoon-profile"></i>
-            <span class="mention">653</span>
+            <span class="mention">{{appDetails.articals}}</span>
             <div class="pulse-title">
-            Recently added <span class="strong">Articles</span>
+            <span class="strong">Articles</span>
             </div>
         </div>
     </div>
@@ -125,39 +127,13 @@
     <h2>Latest Updates</h2>
     <div class="row">
         <div class="col-md-12">
-            <div class="col-md-4">
+            <div class="col-md-4" ng-repeat="update in updates">
                 <div class="latest-box">
-                    <img src="dsfdf">
+                    <img ng-src="{{update.imageUrl}}">
                     <div class="description">
-                        <div class="date">May 17,2015</div>
-                        <div class="block-title">Collections</div>
-                        One of the most awaiting shop opened its grad showroom at OMR.
-                    </div>
-                    <div class="read-more">
-                        <button class="btn btn-primary" type="button">Read More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="latest-box">
-                    <img src="dsfdf">
-                    <div class="description">
-                        <div class="date">May 17,2015</div>
-                        <div class="block-title">Collections</div>
-                        One of the most awaiting shop opened its grad showroom at OMR.
-                    </div>
-                    <div class="read-more">
-                        <button class="btn btn-primary" type="button">Read More</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="latest-box">
-                    <img src="dsfdf">
-                    <div class="description">
-                        <div class="date">May 17,2015</div>
-                        <div class="block-title">Collections</div>
-                        One of the most awaiting shop opened its grad showroom at OMR.
+                        <div class="date">{{update.createdDate}}</div>
+                        <div class="block-title">{{update.heading}}</div>
+                        {{update.description}}
                     </div>
                     <div class="read-more">
                         <button class="btn btn-primary" type="button">Read More</button>
@@ -173,16 +149,15 @@
     <h2>Press About US</h2>
     <span class="quotes">"</span>
     <span class="quote-text">
-                    Ultimate work from the guys. Which will be a landmark....
-                </br> Explore the trend from here..
-                   </span>
+              {{appDetails.press}}      
+    </span>
     <span class="quotes">"</span>
 </div>
 <!-- press block ends -->
 <!-- newsleter starts  -->
 <div class=" container newsletter-container col-md-12">
-    <h2>Title for the Block <span class="highlight"> SOMETHING SPECIAL</span></h2>
-    <div class="sub-text">short desc</div>
+    <h2>Please subscribe for more <span class="highlight"> offers and updates</span></h2>
+    <div class="sub-text"></div>
     <div class="subscribe-block">
         <form>
             <div class="input-group">
@@ -214,67 +189,10 @@
         All rights are reserved
     </div>
 </div>
-<div id="effect-1" class="effects clearfix">
-            <div class="img">
-                <img src="img/jpg/1.jpg" alt="">
-                <div class="overlay">
-                    <a href="#" class="expand">+</a>
-                 </div>
-            </div>
-            <div class="img">
-                <img src="img/jpg/2.jpg" alt="">
-                <div class="overlay">
-                    <a href="#" class="expand">+</a>
-                    <a class="close-overlay hidden">x</a>
-                </div>
-            </div>
-            <div class="img">
-                <img src="img/jpg/3.jpg" alt="">
-                <div class="overlay">
-                    <a href="#" class="expand">+</a>
-                    <a class="close-overlay hidden">x</a>
-                </div>
-            </div>
-            <div class="img">
-                <img src="img/jpg/4.jpg" alt="">
-                <div class="overlay">
-                    <a href="#" class="expand">+</a>
-                    <a class="close-overlay hidden">x</a>
-                </div>
-            </div>
-        </div>
 
-
-<script>
-    $(document).ready(function(){
-        if (Modernizr.touch) {
-            // show the close overlay button
-            $(".close-overlay").removeClass("hidden");
-            // handle the adding of hover class when clicked
-            $(".img").click(function(e){
-                if (!$(this).hasClass("hover")) {
-                    $(this).addClass("hover");
-                }
-            });
-            // handle the closing of the overlay
-            $(".close-overlay").click(function(e){
-                e.preventDefault();
-                e.stopPropagation();
-                if ($(this).closest(".img").hasClass("hover")) {
-                    $(this).closest(".img").removeClass("hover");
-                }
-            });
-        } else {
-            // handle the mouseenter functionality
-            $(".img").mouseenter(function(){
-                $(this).addClass("hover");
-            })
-            // handle the mouseleave functionality
-            .mouseleave(function(){
-                $(this).removeClass("hover");
-            });
-        }
-    });
+<script type="text/ng-template" id="customTemplate.html">
+  <a>
+      <span bind-html-unsafe="match.label"></span>
+      <span bind-html-unsafe="match.model.places"></span>
+  </a>
 </script>
-
-
