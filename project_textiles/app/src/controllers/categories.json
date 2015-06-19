@@ -1,8 +1,8 @@
 [
 	{
 		"id":1,
-		"name":"Ethinic wear",
-		"imageUrl":"images/1.jpg",
+		"name":"Ethinic wearr",
+		"imageUrl":"",
 		"typeId":1,
 		"typeName":"womens"
 
@@ -10,7 +10,7 @@
 	{
 		"id":2,
 		"name":"Western wear",
-		"imageUrl":"images/2.jpg",
+		"imageUrl":"",
 		"typeId":1,
 		"typeName":"womens"
 
@@ -18,7 +18,7 @@
 	{
 		"id":3,
 		"name":"Winter wear",
-		"imageUrl":"images/3.jpg",
+		"imageUrl":"",
 		"typeId":1,
 		"typeName":"womens"
 
@@ -26,7 +26,7 @@
 	{
 		"id":4,
 		"name":"Bottom wear",
-		"imageUrl":"images/4.jpg",
+		"imageUrl":"",
 		"typeId":1,
 		"typeName":"womens"
 
@@ -34,7 +34,7 @@
 	{
 		"id":5,
 		"name":"LingerIE",
-		"imageUrl":"images/5.jpg",
+		"imageUrl":"",
 		"typeId":1,
 		"typeName":"womens"
 
@@ -42,17 +42,9 @@
 	{
 		"id":6,
 		"name":"Duppatas",
-		"imageUrl":"images/6.jpg",
+		"imageUrl":"",
 		"typeId":1,
 		"typeName":"womens"
-
-	},
-	{
-		"id":7,
-		"name":"Shirts",
-		"imageUrl":"images/7.jpg",
-		"typeId":2,
-		"typeName":"mens"
 
 	}
 ]

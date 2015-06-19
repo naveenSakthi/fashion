@@ -2,7 +2,7 @@
 	{
 		"id":1,
 		"name":"pepe",
-		"logo":"images/1.jpg",
+		"logo":"",
 		"description":"",
 		"showRooms":"50",
 		"places":"20",
@@ -19,7 +19,7 @@
 	{
 		"id":2,
 		"name":"Lee",
-		"logo":"images/2.jpg",
+		"logo":"",
 		"description":"",
 		"showRooms":"20",
 		"places":"50",

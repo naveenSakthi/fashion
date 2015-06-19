@@ -1,4 +1,4 @@
-var fashionApp = angular.module('fashionApp', ['ui.router','ui.bootstrap','pageslide-directive'])
+var fashionApp = angular.module('fashionApp', ["ui.router","angular-input-stars","ngMaterial"])
     fashionApp.config(function($stateProvider){
     $stateProvider
         .state('home', {

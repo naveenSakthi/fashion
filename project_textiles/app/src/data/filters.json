@@ -1,0 +1,38 @@
+{
+	"filters": [
+		{
+			"name": "Categories",
+			"values" : [
+				{
+					"name": "Men",
+					"isSelected": "0"
+				},
+				{
+					"name": "Women",
+					"isSelected": "0"
+				},
+				{
+					"name": "Kids",
+					"isSelected": "1"
+				}
+			]
+		},
+		{
+			"name": "Brands",
+			"values" : [
+				{
+					"name": "Royal",
+					"isSelected": "0"
+				},
+				{
+					"name": "Lacoste",
+					"isSelected": "1"
+				},
+				{
+					"name": "Gucci",
+					"isSelected": "0"
+				}
+			]
+		}
+	] 
+}

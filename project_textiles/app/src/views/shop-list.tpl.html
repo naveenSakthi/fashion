@@ -1,4 +1,4 @@
-<div class="shop-list">
+<div class="shop-list" ng-controller="shopController" scroll-y="onScroll($isAtEnd)" scroll-y-end-offset="300" scroll-y-for-body="true">
 <nav class="navbar navbar-default header">	
 	<div class="navbar-collapse collapse" id="navbar">
 		<ul class="nav navbar-nav">
@@ -7,41 +7,63 @@
 		<div class="navbar-header">
 			<a class="navbar-brand">Project name</a>
 		</div>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a>safddasf</a></li>
-		</ul>
+		<div class="navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<input type="text" class="header-search-box" placeholder="Search Shops">
+					<!--div class="input-prepend">
+		      			<label class="add-on" for="amountInput"><b><i class="icon-search"></i></b></label>
+		      			<input type="text" autofocus="autofocus" placeholder="Search Shops" class="header-search-box"/>
+			    		</div-->
+				</li>
+			</ul>
+		</div>
 	</div>
 </nav>
 
+
 <div class="data-container">
 	<div class="col-md-3 col-sm-3 col-lg-3 filter-panel">
-		<div class="filter-block">
+		<div class="filter-block" ng-repeat="filter in filters">
 			<div class="filter-header modal-header">
-				asdfasdf
+				{{filter.name}}
 			</div>
 			<div class="filter-content modal-body">
-contentcontentcontentcontentcontentcontentcontentcontent
-			</div>
-		</div>
-		<div class="filter-block">
-			<div class="filter-header modal-header">
-asddddddddddddddd
-			</div>
-			<div class="filter-content modal-body">
-contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+				<div ng-repeat="value in filter.values">
+					<input id="filterOption{{filter.name}}{{$index}}" type="checkbox" ng-model="value.isSelected" ng-true-value="1" ng-false-value="0"/> <label for="filterOption{{filter.name}}{{$index}}">{{value.name}}</label>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-9 col-sm-9 col-lg-9" ng-init="shops=[{name: 'The Chennai Silks', subHeader: 'Family & Fashion', address: 'Velacherry Chennai', rating: '4', total: 125, image: 'images/chennai_silks.jpeg'},{name: 'The Chennai Silks', subHeader: 'Family & Fashion', address: 'Velacherry Chennai', rating: '4', total: 125, image: 'images/pothys.jpeg'},{name: 'The Chennai Silks', subHeader: 'Family & Fashion', address: 'Velacherry Chennai', rating: '4', total: 125, image: 'images/Saravana_Stores_logo.jpg'},{name: 'The Chennai Silks', subHeader: 'Family & Fashion', address: 'Velacherry Chennai', rating: '4', total: 125, image: 'images/pothys.jpeg'},{name: 'The Chennai Silks', subHeader: 'Family & Fashion', address: 'Velacherry Chennai', rating: '4', total: 125, image: 'images/Saravana_Stores_logo.jpg'}]">
+	<div class="col-md-9 col-sm-9 col-lg-9">
 		<div class="col-md-3 col-sm-3 col-lg-3 shop-wrapper" ng-repeat="shop in shops">
 			<div class="one-shop">
-				<img src="{{shop.image}}"></img>{{shop.name}}
+				<img src="{{shop.imageUrl}}"></img>
+				<!-- <img></img> -->
+				<div class="shop-name-block">
+					<div class="shop-name">
+						<div class="name">{{shop.name}}</div>
+						<div class="sub-header">{{shop.subHeader}}</div>
+					</div>
+					<div class="is-rated">
+						<input-stars max="1" icon-full="icomoon-star" icon-base="icomoon-star" icon-empty="icomoon-star-o" ng-model="shop.isRated" ng-change="checkLoginAndRateThisShop($index)"></input-stars>
+					</div>
+				</div>
+				<div class="shop-address-rating-block">
+					<div class="shop-address-block" ng-bind-html="trustedHtml(shop.address)">
+					</div>
+					<div class="shop-rating-block">
+						<!-- <i class="glyphicon-star" ng-repeat="i in [0,1,2,3,4]" ng-class="{'rating-selected': i < shop.rating}"></i> -->
+						<input-stars max="5" icon-full="icomoon-star" icon-base="icomoon-star" icon-empty="icomoon-star-o" ng-model="shop.rating" readonly></input-stars>
+						({{shop.totalRatings}})
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="navbar navbar-fixed-bottom footer-container">
+<div class="container col-md-12 col-lg-12 col-sm-12 footer-container">
 	<div class="footer-content">
 		<ul>
 			<li>Home</li>
@@ -53,9 +75,9 @@ contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcon
 			<li>About</li>
 		</ul>
 		<ul>
-			<li>Fb Icon</li>
-			<li>Tw Icon</li>
-			<li>Li Icon</li>
+			<li><i class="icomoon-facebook"></i></li>
+			<li><i class="icomoon-google-plus"></i></li>
+			<li><i class="icomoon-twitter"></i></li>
 		</ul>
 	</div>
 	<div class="copy-right">
@@ -63,76 +85,3 @@ contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcon
 	</div>
 </div>
 </div>
-
-
-
-<style>
-.shop-list {
-	background: #CBD3E0;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-}
-.shop-list .header {
-	margin: 10px;
-	border-radius: 5px;
-}
-.shop-list .header .navbar-right:last-child {
-	margin-right: 0px;
-}
-.shop-list .header .navbar-right {
-	margin-right: 0px;
-}
-.shop-list .data-container {
-	width: 100%;
-}
-.shop-list .data-container .filter-panel {
-	overflow: auto;
-}
-.shop-list .data-container .one-shop {
-	margin-bottom: 10px;
-	border-radius: 5px;
-}
-.shop-list .data-container .one-shop img {
-	width: 100%;
-	height: 150px;
-}
-.shop-list .data-container .shop-wrapper:nth-child(4) {
-	padding-right: 0;
-}
-.shop-list .data-container .shop-wrapper:nth-child(4n+1) {
-	padding-left: 0;
-}
-.shop-list .data-container .filter-block {
-	background: white;
-	border-radius: 5px;
-	margin-bottom: 10px;
-}
-.shop-list .data-container .filter-block .filter-header {
-	background: #ECEFF4;
-	font-size: 16px;
-	font-weight: bold;
-	color: #929AA9;
-}
-.shop-list .data-container .filter-block .filter-content {
-	word-wrap: break-word;
-}
-.shop-list .data-container .one-shop {
-	height: 300px;
-	background: white;
-}
-.footer-container {
-	background: #3D4D66;
-}
-.footer-content {
-	text-align: center;
-	border-bottom: 2px solid #4C5C75;
-}
-.footer-content li {
-	color: white;
-}
-.copy-right {
-	padding-top: 10px;
-	color: #6A7A91;
-}
-</style>

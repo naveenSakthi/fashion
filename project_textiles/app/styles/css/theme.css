@@ -34,7 +34,7 @@ body {
   position: relative;
 }
 .top-most {
-  height: 500px;   /* todo */
+  height: 500px;
   background: url('../../images/top-bg.jpg') repeat;
   color: #3d4d65;
 }
@@ -46,8 +46,6 @@ body {
   z-index: 0;
   top: 0;
   left: 0;
-  background: -webkit-radial-gradient(top center, ellipse cover, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
-  background: -moz-linear-gradient(right, rgba(0, 130, 213, 0.2), #a234d5);
 }
 .banner-text {
   font-weight: bold;
@@ -58,6 +56,14 @@ body {
   line-height: 25px;
   margin-bottom: 10px;
 }
+
+.area-container{
+  text-align: center;
+  background: #ffffff;
+  min-height: 450px;
+  padding-top: 15px;
+}
+
 .tab-container {
   text-align: center;
   background: #eceff4;
@@ -440,20 +446,155 @@ body {
   display: inline-block;
   padding: 5px;
 }
-div.img-div{
-    height:200px;
-    width:200px;
-    overflow:hidden;
-    border-radius:50%;
-    border: 1px solid white;
-    cursor: pointer;
-    margin: 20px auto;
-    padding: 0;
-    position: relative;
+.shop-list {
+  background: #CBD3E0;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
 }
-
-.dropdown-menu{
-  min-width: 100% !important;
+.shop-list .header {
+  margin: 10px;
+  border-radius: 5px;
 }
-
-
+.shop-list .header .navbar-right {
+  margin-right: 0px;
+}
+.shop-list .header .navbar-right:last-child {
+  margin-right: 0px;
+}
+.shop-list .header .navbar-right li {
+  padding: 10px 0;
+}
+.shop-list .header .navbar-right li .header-search-box {
+  height: 30px;
+  border: 1px solid #e0e1e5;
+  background: #eceff4;
+}
+.shop-list .data-container {
+  width: 100%;
+}
+.shop-list .data-container .filter-panel {
+  overflow: auto;
+}
+.shop-list .data-container .one-shop {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 300px;
+  background: white;
+}
+.shop-list .data-container .one-shop img {
+  width: 100%;
+  height: 150px;
+  border-bottom: 3px solid #EBEBEF;
+}
+.shop-list .data-container .shop-wrapper:nth-child(4n) {
+  padding-right: 0;
+}
+.shop-list .data-container .shop-wrapper:nth-child(4n+1) {
+  padding-left: 0;
+}
+.shop-list .data-container .filter-block {
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.shop-list .data-container .filter-block .filter-header {
+  background: #ECEFF4;
+  font-size: 16px;
+  font-weight: bold;
+  color: #929AA9;
+}
+.shop-list .data-container .filter-block .filter-content {
+  word-wrap: break-word;
+}
+.shop-list .shop-name-block {
+  width: 100%;
+  padding: 0 5px;
+  height: 50px;
+  position: relative;
+}
+.shop-list .shop-name-block .shop-name {
+  float: left;
+  text-align: center;
+  max-width: 85%;
+  height: inherit;
+}
+.shop-list .shop-name-block .shop-name .name {
+  color: #83909c;
+  font-size: 18px;
+  font-weight: bold;
+  max-height: 30px;
+  line-height: 15px;
+  margin-top: 3px;
+  overflow: hidden;
+}
+.shop-list .shop-name-block .shop-name .sub-header {
+  color: #ABB5BE;
+  height: 20px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.shop-list .shop-name-block .is-rated {
+  border-left: 3px solid #EBEBEF;
+  border-right: 3px solid #EBEBEF;
+  box-sizing: border-box;
+  position: relative;
+  float: right;
+  width: 20px;
+  margin-right: -3px;
+}
+.shop-list .shop-name-block .is-rated li {
+  padding: 0 !important;
+  font-size: 15px;
+}
+.shop-list .shop-name-block .is-rated:before {
+  background: white none repeat scroll 0 0;
+  border-left: 3px solid #EBEBEF;
+  border-top: 3px solid #EBEBEF;
+  bottom: -5px;
+  content: "";
+  height: 48%;
+  position: absolute;
+  right: 5%;
+  transform: rotate(45deg);
+  width: 92%;
+}
+.shop-list .shop-address-rating-block {
+  width: 100%;
+  padding: 0 5px;
+  height: 50px;
+}
+.shop-list .shop-address-rating-block .shop-address-block {
+  color: #abb5be;
+  font-size: 13px;
+  height: 50px;
+  line-height: 10px;
+  overflow: hidden;
+  width: 85%;
+  word-break: break-all;
+}
+.shop-list .shop-address-rating-block .shop-rating-block {
+  text-align: right;
+  width: 100%;
+  color: #abb5be;
+  font-weight: bold;
+}
+.shop-list .shop-address-rating-block .shop-rating-block li {
+  padding: 2px !important;
+  font-size: 15px;
+  cursor: default !important;
+}
+.shop-list .footer-container {
+  background: #3D4D66;
+}
+.shop-list .footer-content {
+  text-align: center;
+  border-bottom: 2px solid #4C5C75;
+}
+.shop-list .footer-content li {
+  color: white;
+}
+.shop-list .copy-right {
+  padding-top: 10px;
+  color: #6A7A91;
+}
