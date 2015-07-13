@@ -25,7 +25,7 @@
 <div class="data-container">
 	<div class="col-md-3 col-sm-3 col-lg-3 filter-panel">
 		<div class="filter-block" ng-repeat="filter in filters">
-			<div class="filter-header modal-header">
+			<div class="filter-header">
 				{{filter.name}}
 			</div>
 			<div class="filter-content modal-body">
@@ -36,9 +36,9 @@
 		</div>
 	</div>
 	<div class="col-md-9 col-sm-9 col-lg-9">
-		<div class="col-md-3 col-sm-3 col-lg-3 shop-wrapper" ng-repeat="shop in shops">
+		<div class="col-md-6 col-sm-6 col-lg-6 shop-wrapper" ng-repeat="shop in shops">
 			<div class="one-shop">
-				<img src="{{shop.imageUrl}}"></img>
+				<!-- <img src="{{shop.imageUrl}}"></img> -->
 				<!-- <img></img> -->
 				<div class="shop-name-block">
 					<div class="shop-name">
